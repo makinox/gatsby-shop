@@ -8,9 +8,13 @@
 
 import React from 'react'
 import Layout from './src/components/layout'
+import {GlobalStyles} from './src/styles'
 
 export function wrapRootElement({ element }) { return (
-    <Layout>
-        {element}
-    </Layout>
+    <>
+        <GlobalStyles />
+        <Layout>
+            {element}
+        </Layout>
+    </>
 )}
