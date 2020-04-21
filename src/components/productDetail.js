@@ -4,7 +4,7 @@ import { SEO, Stars } from './'
 import { CartContext } from '../context'
 import priceFormat from '../utils/priceFormat'
 
-export default function ProductDetail({ price, sku: id, product: {name, metadata} }) {
+export default function ProductDetail({ price, id, product: {name, metadata} }) {
     const formatePrice = priceFormat(price)
     const [size, setSize] = useState(2)
     const [qty, setQty] = useState(1)
