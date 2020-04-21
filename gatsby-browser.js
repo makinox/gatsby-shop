@@ -8,13 +8,14 @@
 
 import React from 'react'
 import Layout from './src/components/layout'
-import {GlobalStyles} from './src/styles'
+import { GlobalStyles } from './src/styles'
+import { CartProvider } from './src/context'
 
 export function wrapRootElement({ element }) { return (
-    <>
+    <CartProvider>
         <GlobalStyles />
         <Layout>
             {element}
         </Layout>
-    </>
+    </CartProvider>
 )}
